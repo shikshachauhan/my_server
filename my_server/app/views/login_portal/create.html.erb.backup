@@ -1,0 +1,21 @@
+<div class="brand">
+
+       <!-- <img src="assets/logo.jpg" alt="logo" /-->
+        <font color="green">GramVaani Soochna Sanchar</font></div> 
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <%#= @ngoname %>
+    <ul class="nav navbar-nav">
+     <li>
+        <%= link_to '<button type="button">Register Admin</button>'.html_safe, :action =>'new', :controller => 'registeradmins' %>
+     </li>
+     <li>
+        <%= link_to '<button type="button">Launch Survey</button>'.html_safe, :action => 'create', :controller => 'survey' %>
+     </li>
+     <li>
+        <%= link_to '<button type="button">View Surveys</button>'.html_safe, :action => 'listsurvey',  :controller => 'survey' %>
+     <!-- </li>   
+     <li> 
+        <%#= link_to '<button type="button">View Surveys</button>'.html_safe, :action => 'listsurvey',  :controller => 'survey' %>
+     </li> -->
+    </ul>
+</div>

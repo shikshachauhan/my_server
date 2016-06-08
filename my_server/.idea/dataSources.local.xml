@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails my_server: development" uuid="38484562-34ce-4316-9685-eb810bd45648">
+      <user-name>root</user-name>
+      <user-password>dfd9dfdedfcbdfc9dfc1</user-password>
+      <schema-pattern>AS_Database.*</schema-pattern>
+      <default-schemas>AS_Database.*</default-schemas>
+    </data-source>
+  </component>
+</project>

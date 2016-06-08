@@ -1,0 +1,18 @@
+      create  app/controllers/ngo_users_controller.rb
+       route  get 'ngo_users/new'
+      invoke  erb
+      create    app/views/ngo_users
+      create    app/views/ngo_users/new.html.erb
+      invoke  test_unit
+      create    test/controllers/ngo_users_controller_test.rb
+      invoke  helper
+      create    app/helpers/ngo_users_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    js
+      create      app/assets/javascripts/ngo_users.js
+      invoke    css
+      create      app/assets/stylesheets/ngo_users.css
+
+ 
+ngoname:string username:string password:string age:integer phone:integer city:string website:string email:string field:string 

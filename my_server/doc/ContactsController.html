@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class ContactsController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-getcontact">#getcontact</a>
+    
+    <li ><a href="#method-i-getcontactlist">#getcontactlist</a>
+    
+    <li ><a href="#method-i-postcontact">#postcontact</a>
+    
+    <li ><a href="#method-i-postcontactlist">#postcontactlist</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-ContactsController">
+  <h1 id="class-ContactsController" class="class">
+    class ContactsController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-getcontact" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getcontact</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="getcontact-source">
+            <pre><span class="ruby-comment"># File app/controllers/contacts_controller.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getcontact</span> <span class="ruby-comment">#2</span>
+        <span class="ruby-identifier">gcmid</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gcmid</span>]
+        <span class="ruby-identifier">admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">gcmid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">gcmid</span>).<span class="ruby-identifier">first</span>  <span class="ruby-comment">#Find the admin who has launched the message</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">admin</span> <span class="ruby-comment">#8</span>
+       <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;inadmin&quot;</span>
+       <span class="ruby-identifier">search_names</span> = <span class="ruby-string">&quot;&quot;</span> 
+                <span class="ruby-identifier">search_callers</span> = <span class="ruby-string">&quot;&quot;</span>
+                <span class="ruby-identifier">search_names</span> =  <span class="ruby-identifier">params</span>[<span class="ruby-value">:search_names</span>]
+       <span class="ruby-identifier">search_callers</span> =  <span class="ruby-identifier">params</span>[<span class="ruby-value">:search_callers</span>]
+       <span class="ruby-identifier">contact_list</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:contact_list</span>]  <span class="ruby-comment">#neccessary parameter</span>
+       <span class="ruby-identifier">puts</span> <span class="ruby-identifier">search_names</span>
+       <span class="ruby-identifier">puts</span> <span class="ruby-identifier">search_callers</span>
+       <span class="ruby-identifier">puts</span> <span class="ruby-identifier">contact_list</span>
+       <span class="ruby-keyword">begin</span>
+                        <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Request</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">method</span><span class="ruby-operator">:</span> <span class="ruby-value">:get</span> , <span class="ruby-identifier">url</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;http://internal.gramvaani.org:8080/vapp/api/v1/callerinfo_contact/?api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&amp;username=preeti&amp;format=json&quot;</span>, <span class="ruby-identifier">contact_list</span><span class="ruby-operator">:</span> <span class="ruby-identifier">contact_list</span>, <span class="ruby-identifier">search_names</span><span class="ruby-operator">:</span> <span class="ruby-identifier">search_names</span>, <span class="ruby-identifier">search_callers</span><span class="ruby-operator">:</span> <span class="ruby-identifier">search_callers</span>, <span class="ruby-identifier">timeout</span><span class="ruby-operator">:</span> <span class="ruby-value">5</span>)
+                <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                        <span class="ruby-identifier">e</span>.<span class="ruby-identifier">inspect</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment">#9</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Could not get contacts!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+                <span class="ruby-keyword">else</span> <span class="ruby-comment">#9</span>
+                        <span class="ruby-identifier">response</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;objects&#39;</span>] <span class="ruby-comment">#10</span>
+                       <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">response</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">200</span>  
+                      <span class="ruby-keyword">else</span> <span class="ruby-comment">#10</span>
+                               <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Could not get contacts!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+                       <span class="ruby-keyword">end</span> <span class="ruby-comment">#10</span>
+               <span class="ruby-keyword">end</span> <span class="ruby-comment">#9</span>
+    <span class="ruby-keyword">else</span> <span class="ruby-comment">#8</span>
+       <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;outadmin&quot;</span>
+       <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Not an Authorized Admin!&#39;</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">401</span>
+       <span class="ruby-identifier">message</span> = <span class="ruby-string">&quot;Not an Authorized Admin!&quot;</span>
+       <span class="ruby-identifier">push_gcm</span>(<span class="ruby-identifier">gcmid</span>,<span class="ruby-identifier">message</span>)  
+    <span class="ruby-keyword">end</span> <span class="ruby-comment">#8             </span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-getcontactlist" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getcontactlist</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="getcontactlist-source">
+            <pre><span class="ruby-comment"># File app/controllers/contacts_controller.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getcontactlist</span> <span class="ruby-comment">#2</span>
+        <span class="ruby-identifier">gcmid</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gcmid</span>]
+        <span class="ruby-identifier">admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">gcmid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">gcmid</span>).<span class="ruby-identifier">first</span>  <span class="ruby-comment">#Find the admin who has launched the message</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">admin</span> <span class="ruby-comment">#8</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;inadmin&quot;</span>
+                <span class="ruby-keyword">begin</span>
+                        <span class="ruby-identifier">response</span> = <span class="ruby-constant">RestClient</span><span class="ruby-operator">::</span><span class="ruby-constant">Request</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-identifier">method</span><span class="ruby-operator">:</span> <span class="ruby-value">:get</span>, <span class="ruby-identifier">url</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;http://internal.gramvaani.org:8080/vapp/api/v1/callerinfo_contact_list/?api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&amp;username=preeti&amp;format=json&quot;</span>, <span class="ruby-identifier">timeout</span><span class="ruby-operator">:</span> <span class="ruby-value">5</span>)
+                <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+                        <span class="ruby-identifier">e</span>.<span class="ruby-identifier">inspect</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment">#9</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Could not get contactlist!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+                <span class="ruby-keyword">else</span> <span class="ruby-comment">#9</span>
+                        <span class="ruby-identifier">response</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>)
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>[<span class="ruby-string">&#39;objects&#39;</span>] <span class="ruby-comment">#10 </span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">response</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">200</span>  
+                       <span class="ruby-keyword">else</span> <span class="ruby-comment">#10</span>
+                                <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Could not get contactlist!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+                        <span class="ruby-keyword">end</span> <span class="ruby-comment">#10</span>
+                <span class="ruby-keyword">end</span> <span class="ruby-comment">#9</span>
+<span class="ruby-keyword">else</span> <span class="ruby-comment">#8</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;outadmin&quot;</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Not an Authorized Admin!&#39;</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">401</span>
+        <span class="ruby-identifier">message</span> = <span class="ruby-string">&quot;Not an Authorized Admin!&quot;</span>
+        <span class="ruby-identifier">push_gcm</span>(<span class="ruby-identifier">gcmid</span>,<span class="ruby-identifier">message</span>)  
+<span class="ruby-keyword">end</span> <span class="ruby-comment">#8</span>
+        
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-postcontact" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">postcontact</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="postcontact-source">
+            <pre><span class="ruby-comment"># File app/controllers/contacts_controller.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">postcontact</span> <span class="ruby-comment">#1</span>
+        <span class="ruby-identifier">gcmid</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gcmid</span>]
+
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">gcmid</span>.<span class="ruby-identifier">present?</span> <span class="ruby-comment">#2</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;GCM ID not present! Failure!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+        <span class="ruby-keyword">else</span> <span class="ruby-comment">#2</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">present?</span> <span class="ruby-keyword">or</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:clist_ids</span>].<span class="ruby-identifier">present?</span> <span class="ruby-keyword">or</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:number</span>].<span class="ruby-identifier">present?</span> <span class="ruby-keyword">or</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>].<span class="ruby-identifier">present?</span> <span class="ruby-keyword">or</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:resource_uri</span>].<span class="ruby-identifier">present?</span> <span class="ruby-comment">#3</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;All the parameters not present! Failure!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+                <span class="ruby-keyword">else</span> <span class="ruby-comment">#3</span>
+
+                        <span class="ruby-identifier">name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>] 
+                        <span class="ruby-identifier">number</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:number</span>].<span class="ruby-identifier">to_s</span>
+                        <span class="ruby-identifier">gender</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>]
+                        <span class="ruby-identifier">location_fk</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:resource_uri</span>]
+                        <span class="ruby-identifier">clist_ids</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:clist_ids</span>]
+                        <span class="ruby-identifier">age</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>]
+                        <span class="ruby-identifier">city</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:city</span>]
+                        <span class="ruby-identifier">city</span> = <span class="ruby-string">&quot;&quot;</span>
+                        <span class="ruby-identifier">state</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:state</span>]
+                        <span class="ruby-identifier">district</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:district</span>]
+                        <span class="ruby-identifier">block</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:block</span>]
+                        <span class="ruby-identifier">location</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>]
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">name</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">number</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">gender</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">age</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">location_fk</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">clist_ids</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">city</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">state</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">district</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">block</span>
+                        <span class="ruby-identifier">admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">gcmid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">gcmid</span>).<span class="ruby-identifier">first</span>  <span class="ruby-comment">#Find the admin who has launched the message</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">admin</span> <span class="ruby-comment">#8</span>
+                                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;inadmin&quot;</span>
+                                <span class="ruby-comment">#render json: { message: &#39;Contact Created!&#39; }, status: 200  </span>
+
+                                <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;internal.gramvaani.org&#39;</span>, <span class="ruby-value">8080</span>, <span class="ruby-value">:read_timeout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>)
+                                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-value">5</span>
+                                <span class="ruby-identifier">req</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Post</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;/vapp/api/v1/callerinfo_contact/?api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&amp;username=preeti&amp;format=json&#39;</span>,<span class="ruby-identifier">initheader</span> = {<span class="ruby-string">&#39;Content-Type&#39;</span> =<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;application/json&#39;</span>})
+                                <span class="ruby-comment">#data = {&quot;name&quot;: params[:name].to_s, &quot;clist_ids&quot;: params[:clist_ids].to_s, &quot;number&quot;: params[:number].to_s, &quot;gender&quot;: params[:gender].to_s}</span>
+                                <span class="ruby-identifier">data</span> = {<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:clist_ids=</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:clist_ids</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:number=</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:number</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:gender=</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:location_fk=</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:resource_uri</span>].<span class="ruby-identifier">to_s</span>} 
+                                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">data</span>
+                                <span class="ruby-identifier">req</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">to_json</span>
+
+                                <span class="ruby-keyword">begin</span>
+                                        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">req</span>)
+                                <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+                                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">error</span>.<span class="ruby-identifier">inspect</span>
+                                <span class="ruby-keyword">end</span>
+                                
+                                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span>
+                                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Net::HTTPCreated&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">201</span> <span class="ruby-comment">#7</span>
+                                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;contact created&quot;</span>
+                                        <span class="ruby-comment">#create user in local Database</span>
+                                        <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">contact</span><span class="ruby-operator">:</span> <span class="ruby-identifier">number</span>, <span class="ruby-identifier">gender</span><span class="ruby-operator">:</span> <span class="ruby-identifier">gender</span>, <span class="ruby-identifier">age</span><span class="ruby-operator">:</span> <span class="ruby-identifier">age</span>, <span class="ruby-identifier">city</span><span class="ruby-operator">:</span> <span class="ruby-identifier">city</span>, <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-identifier">state</span>, <span class="ruby-identifier">district</span><span class="ruby-operator">:</span> <span class="ruby-identifier">district</span>, <span class="ruby-identifier">block</span><span class="ruby-operator">:</span> <span class="ruby-identifier">block</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-identifier">location</span> <span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>)            
+                                     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;contact created in local Database&quot;</span>
+                                     <span class="ruby-ivar">@task</span> = <span class="ruby-constant">Task</span>.<span class="ruby-identifier">create</span>(<span class="ruby-constant">ItemId</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-constant">TaskName</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;CreateContact&#39;</span>, <span class="ruby-constant">Status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Completed&#39;</span>, <span class="ruby-constant">MemberId</span><span class="ruby-operator">:</span> <span class="ruby-identifier">admin</span>.<span class="ruby-identifier">id</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Contact&#39;</span>, <span class="ruby-constant">Contacts</span><span class="ruby-operator">:</span> <span class="ruby-identifier">number</span>, <span class="ruby-constant">Groups</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>) 
+                         <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Contact Created!&#39;</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">200</span>  
+                            <span class="ruby-keyword">else</span> <span class="ruby-comment">#7</span>
+                                    <span class="ruby-ivar">@task</span> = <span class="ruby-constant">Task</span>.<span class="ruby-identifier">create</span>(<span class="ruby-constant">ItemId</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span>, <span class="ruby-constant">TaskName</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;CreateContact&#39;</span>, <span class="ruby-constant">Status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Rejected&#39;</span>, <span class="ruby-constant">MemberId</span><span class="ruby-operator">:</span> <span class="ruby-identifier">admin</span>.<span class="ruby-identifier">id</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Contact&#39;</span>, <span class="ruby-constant">Contacts</span><span class="ruby-operator">:</span> <span class="ruby-identifier">number</span>, <span class="ruby-constant">Groups</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>) 
+                                     <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Could not create contact!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+                             <span class="ruby-keyword">end</span> <span class="ruby-comment">#7</span>
+
+              <span class="ruby-keyword">else</span> <span class="ruby-comment">#8</span>
+                      <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;outadmin&quot;</span>
+                      <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Not an Authorized Admin!&#39;</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">401</span>
+                      <span class="ruby-identifier">message</span> = <span class="ruby-string">&quot;Not an Authorized Admin!&quot;</span>
+                      <span class="ruby-identifier">push_gcm</span>(<span class="ruby-identifier">gcmid</span>,<span class="ruby-identifier">message</span>)  
+
+              <span class="ruby-keyword">end</span> <span class="ruby-comment">#8</span>
+            <span class="ruby-keyword">end</span> <span class="ruby-comment">#3</span>
+        <span class="ruby-keyword">end</span> <span class="ruby-comment">#2                </span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-postcontactlist" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">postcontactlist</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="postcontactlist-source">
+            <pre><span class="ruby-comment"># File app/controllers/contacts_controller.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">postcontactlist</span>
+        <span class="ruby-identifier">gcmid</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:gcmid</span>]
+        <span class="ruby-identifier">admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">gcmid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">gcmid</span>).<span class="ruby-identifier">first</span>  <span class="ruby-comment">#Find the admin who has launched the message</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">admin</span> <span class="ruby-comment">#8</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;inadmin&quot;</span>
+                <span class="ruby-identifier">data</span> = {<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">to_s</span>}
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">data</span>
+                <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;internal.gramvaani.org&#39;</span>, <span class="ruby-value">8080</span>, <span class="ruby-value">:read_timeout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5</span>)
+                <span class="ruby-identifier">http</span>.<span class="ruby-identifier">read_timeout</span> = <span class="ruby-value">5</span>
+                <span class="ruby-identifier">req</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Post</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;/vapp/api/v1/callerinfo_contact_list/?api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&amp;username=preeti&amp;format=json&#39;</span>,<span class="ruby-identifier">initheader</span> = {<span class="ruby-string">&#39;Content-Type&#39;</span> =<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;application/json&#39;</span>})
+                <span class="ruby-identifier">req</span>.<span class="ruby-identifier">body</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">to_json</span>
+
+                <span class="ruby-keyword">begin</span>
+                        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">req</span>)
+                <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">error</span>.<span class="ruby-identifier">inspect</span>
+                <span class="ruby-keyword">end</span>
+                                
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>
+
+               <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Net::HTTPCreated&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">201</span> <span class="ruby-comment">#7</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;contactlist created&quot;</span>
+                        <span class="ruby-comment">#create user in local Database</span>
+                        <span class="ruby-comment">#@group = Group.create(Name: params[:name].to_s, MemberId: admin.id, Status: &quot;Completed&quot;, created_at: Time.now.inspect, updated_at: Time.now.inspect)            </span>
+                    <span class="ruby-comment">#puts &quot;contactlist created in local Database&quot;</span>
+                    <span class="ruby-comment">#@task = Task.create(ItemId: @group.id, TaskName: &#39;CreateContactList&#39;, Status: &#39;Completed&#39;, MemberId: admin.id, Type: &#39;ContactList&#39;, Contacts: &quot;&quot;, Groups: &quot;&quot;, created_at: Time.now.inspect, updated_at: Time.now.inspect) </span>
+           <span class="ruby-ivar">@task</span> = <span class="ruby-constant">Task</span>.<span class="ruby-identifier">create</span>(<span class="ruby-constant">ItemId</span><span class="ruby-operator">:</span> <span class="ruby-value">100</span>, <span class="ruby-constant">TaskName</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;CreateContactList&#39;</span>, <span class="ruby-constant">Status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Completed&#39;</span>, <span class="ruby-constant">MemberId</span><span class="ruby-operator">:</span> <span class="ruby-identifier">admin</span>.<span class="ruby-identifier">id</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;ContactList&#39;</span>, <span class="ruby-constant">Contacts</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-constant">Groups</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>)
+           <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;contactlist created in local Database&quot;</span>
+           <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Contact List Created!&#39;</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">200</span>  
+                
+                <span class="ruby-keyword">else</span> <span class="ruby-comment">#7</span>
+                        <span class="ruby-ivar">@task</span> = <span class="ruby-constant">Task</span>.<span class="ruby-identifier">create</span>(<span class="ruby-constant">ItemId</span><span class="ruby-operator">:</span> <span class="ruby-value">100</span>, <span class="ruby-constant">TaskName</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;CreateContactList&#39;</span>, <span class="ruby-constant">Status</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Rejected&#39;</span>, <span class="ruby-constant">MemberId</span><span class="ruby-operator">:</span> <span class="ruby-identifier">admin</span>.<span class="ruby-identifier">id</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;ContactList&#39;</span>, <span class="ruby-constant">Contacts</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-constant">Groups</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>) 
+                     <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Could not create contactlist!&#39;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">403</span>
+                <span class="ruby-keyword">end</span> <span class="ruby-comment">#7</span>
+<span class="ruby-keyword">else</span> <span class="ruby-comment">#8</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;outadmin&quot;</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> { <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Not an Authorized Admin!&#39;</span> }, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">401</span>
+        <span class="ruby-identifier">message</span> = <span class="ruby-string">&quot;Not an Authorized Admin!&quot;</span>
+        <span class="ruby-identifier">push_gcm</span>(<span class="ruby-identifier">gcmid</span>,<span class="ruby-identifier">message</span>)  
+<span class="ruby-keyword">end</span> <span class="ruby-comment">#8             </span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

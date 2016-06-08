@@ -1,0 +1,38 @@
+Started POST "/contact" for 10.10.78.62 at 2016-05-02 12:32:22 +0530
+Cannot render console from 10.10.78.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContactsController#postcontact as HTML
+  Parameters: {"number"=>"9876543210", "age"=>"23", "block"=>"Delhi", "district"=>"delhi", "name"=>"Heena", "state"=>"Delhi", "gender"=>"F", "clist_ids"=>"1,2,3", "resource_uri"=>"myfile", "gcmid"=>""}
+  Admin Load (0.2ms)  SELECT  `admins`.* FROM `admins` WHERE `admins`.`gcmid` IS NULL  ORDER BY `admins`.`user_id` ASC LIMIT 1
+Completed 403 Forbidden in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+{"number"=>"9876543210", "age"=>"23", "block"=>"Delhi", "district"=>"delhi", "name"=>"Heena", "state"=>"Delhi", "gender"=>"F", "clist_ids"=>"1,2,3", "resource_uri"=>"myfile", "gcmid"=>"APA91bGJ_9DKeihJwddceG3ZMQtBF_8rMw3ClIvQQ4bDKAfjuyRDyJnW6FHFV9ZqXA6qDOadtkNUL8G3wXBWjiY-6tLeM6BXGtSvU_w2Rn1eDXo3AlUu27M"}
+
+Started POST "/contactlist" for 10.10.78.62 at 2016-05-02 12:41:49 +0530
+Cannot render console from 10.10.78.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContactsController#postcontactlist as HTML
+  Parameters: {"name"=>"women", "gcmid"=>""}
+  Admin Load (0.2ms)  SELECT  `admins`.* FROM `admins` WHERE `admins`.`gcmid` IS NULL  ORDER BY `admins`.`user_id` ASC LIMIT 1
+  Admin Load (0.2ms)  SELECT  `admins`.* FROM `admins` WHERE `admins`.`gcmid` = ''  ORDER BY `admins`.`user_id` ASC LIMIT 1
+outadmin
+
+
+
+Started POST "/message" for 10.10.78.62 at 2016-05-02 12:44:33 +0530
+Cannot render console from 10.10.78.62! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MessageController#upload as HTML
+  Parameters: {"message_id"=>"24", "group_ids"=>"", "caller_ids"=>"9990417465,9990417465", "message_args"=>"{\"club\":\"Hello all\",\"date\":\"15.07.2015\",\"callback_calls\":20,\"club_contribs\":40}", "gcmid"=>""}
+  Admin Load (0.2ms)  SELECT  `admins`.* FROM `admins` WHERE `admins`.`gcmid` IS NULL  ORDER BY `admins`.`user_id` ASC LIMIT 1
+here
+
+Message : unfortunately Gologo has stopped.
+
+
+
+Recording - 2 rEQUESTS
+Completed 403 Forbidden in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+Stop the app.
+Parameters: {"filename"=>"/storage/emulated/0/AudioRecorder/1462087596267.mp4", "caller_ids"=>"9990417465,+91 99100 12946", "gcmid"=>"APA91bGJ_9DKeihJwddceG3ZMQtBF_8rMw3ClIvQQ4bDKAfjuyRDyJnW6FHFV9ZqXA6qDOadtkNUL8G3wXBWjiY-6tLeM6BXGtSvU_w2Rn1eDXo3AlUu27M"}
+
+
+Survey
+Send parameter=name

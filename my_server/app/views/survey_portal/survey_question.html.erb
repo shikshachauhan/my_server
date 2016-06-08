@@ -1,0 +1,47 @@
+<div class="brand">
+  <font color="blue">Survey Questions</font>
+</div>
+<h3><center><strong>Form ID = 70</strong></center></h3>
+<head>
+  <style>
+
+    /*table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }*/
+    th, td {
+      color: black;
+      padding: 5px;
+    }
+    th {
+      color: black;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<table cellspacing="10"  style="width:100%">
+  <tr>
+    <th>TEXT</th>
+    <th>TYPE</th>
+    <th>OTHER</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @response['objects'].each do |r| %>
+      <tr>
+        <td><%= r['question']['text'] %></td>
+        <% case r['question']['type']
+             when "mc" %>
+            <td>Multiple Choice</td>
+            <td>Choices <%= r['question']['choices'] %></td>
+        <% when "ff" %>
+            <td>Voice Reponse</td>
+            <td>Max Duration <%= r['question']['max_duration'] %></td>
+        <% when "qu" %>
+            <td>Quantitative</td>
+            <td>Max Digits <%= r['question']['max_digits'] %></td>
+        <% end %>
+      </tr>
+  <% end %>
+</table>

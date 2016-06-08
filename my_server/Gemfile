@@ -1,0 +1,103 @@
+source 'https://rubygems.org'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.2.3'
+gem 'protected_attributes'
+# Use sqlite3 as the database for Active Record
+
+# Use SCSS for stylesheets
+# gem 'sass-rails', '~> 5.0'
+# Use Uglifier as compressor for JavaScript assets
+# gem 'uglifier', '>= 1.3.0'
+# Use CoffeeScript for .coffee assets and views
+# gem 'coffee-rails', '~> 4.1.0'
+# See https://github.com/rails/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
+gem 'whenever', :require => false
+gem 'gcm'
+gem 'rpush'
+gem 'gcm_on_rails'
+gem "puma" 
+gem "rack-timeout"
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# gem 'jbuilder', '~> 2.0'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'rdoc', '~> 4.2', '>= 4.2.2'
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'rest-client'
+gem 'unirest', '1.1.2'
+gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'sass-rails'
+gem 'sass'
+gem 'mysql2', '~> 0.3.20'
+gem 'activemodel','4.2.3'
+gem 'tilt','1.4.1'
+gem 'actionview','4.2.3'
+gem 'sprockets','3.3.4'
+gem 'jwt','1.5.1'
+
+gem 'mini_portile','0.6.2'
+gem 'httparty','0.13.5'
+gem 'unf_ext','0.0.7.1'
+gem 'domain_name','0.5.24'
+gem 'actionpack','4.2.3'
+gem 'power_assert','0.2.2'
+gem 'actionmailer','4.2.3'
+#gem 'sass-rails','5.0.3'
+gem 'redis','3.2.1'
+gem 'unf','0.1.4'
+gem 'gupshup','0.3.0'
+gem 'activejob','4.2.3'
+gem 'httpclient','2.6.0.1'
+gem 'coffee-rails','4.1.0'
+gem 'activerecord','4.2.3'
+gem 'mime-types','2.6.1'
+gem 'test-unit','3.0.8'
+#gem 'nileshtrivedi-gupshup','0.1.3'
+gem 'minitest','5.8.0'
+#gem 'sqlite3','1.3.10'
+gem 'uglifier','2.7.2'
+gem 'jbuilder','2.3.1'
+gem 'railties','4.2.3'
+gem 'activesupport','4.2.3'
+gem 'sprockets-rails','2.3.3'
+gem 'coffee-script-source','1.9.1.1'
+gem 'netrc','0.10.3'
+gem 'nokogiri','1.6.6.2'
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+#gem 'bcrypt-ruby', :require => 'bcrypt' 
+gem 'pony', '~> 1.11'
+
+#gem 'twilio-ruby'
+
+#gem for sending free messages to a number
+gem 'sms_fu', '~> 1.1.2'
+
+#Action mailer for sms_fu/smseasy
+# gem for pretty printing of the table coloumns 
+gem 'hirb', '~> 0.7.3'
+# Use Unicorn as the app server
+# gem 'unicorn'
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+  gem 'rails-erd'
+
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+end
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- 1.1 -->
+<!--   -->
+<head> <!-- 1 -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>GramVaani Soochna Sanchar</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/business-casual.css" rel="stylesheet">
+ 
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head> <!-- 1  -->
+
+<body> <!-- 2  -->
+
+    <div class="brand">  <!--  3 -->
+        <img src="/assets/logo.jpg" alt="logo" />
+
+        <h1><font color="white" face="Verdana" size="20">GRAMVAANI SOOCHNA SANCHAR</font></h1>
+    </div>  <!--  3 -->
+     <!-- Navigation bar -->
+  <font size = 4> <!-- 4  -->
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"-->
+            <div class="single-page-nav sticky-wrapper" id="tmNavbar">
+                <ul class="nav navbar-nav">
+                   
+                     <li>
+                        <!--a href="#section1">Homepage</a-->
+                        <%= link_to 'Home', :action => 'homepage', :controller => 'welcome' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Signup', :action => 'new', :controller => 'ngo_users' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Sign In', :action => 'new', :controller => 'login_portal' %>
+                    </li>
+                    <li>
+                        <%= link_to 'Contact', :action => 'contact', :controller => 'welcome' %>
+                    </li>   
+                              
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+  </font>  <!--  4 -->
+
+    <div class="container"> <!--  5 -->
+
+        <div class="row"> <!--  6 -->
+            <div class="box"> <!--  7 -->
+                <div class="col-lg-12"> <!--  8 -->
+                    <hr>
+                    <h2 class="intro-text text-center">Contact
+                        <strong>Gram Vaani Soochna Sanchar</strong>
+                    </h2>
+                    <hr>
+                </div> <!--  8 -->
+                <div class="col-md-8"> <!--  9 -->
+                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+                    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+                </div> <!--  9 -->
+                <div class="col-md-4"> <!--  10 -->
+                    <p>Phone:
+                        <strong>8826533273</strong>
+                    </p>
+                    <p>Email:
+                        <strong><a href="mailto:preetirani07@gmail.com">preetirani07@gmail.com</a></strong>
+                    </p>
+                    
+                </div> <!--  10 -->
+                <div class="clearfix"></div>
+            </div> <!--  7 -->
+        </div> <!--  6 -->
+    </div> <!--  5 -->
+
+    <!-- /.container -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p>Copyright &copy; GramVaani</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/assets/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });
+</script>
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel').carousel({
+    interval: 5000 //changes the speed
+  })
+</script>
+
+<!-- Javascript -->
+<script src="/assets/jquery-1.11.1.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/jquery.backstretch.min.js"></script>
+<script src="/assets/scripts.js"></script>
+
+<!--[if lt IE 10]>
+<script src="/assets/placeholder.js"></script>
+<![endif]-->
+
+
+</body>
+
+</html>

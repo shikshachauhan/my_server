@@ -1,0 +1,108 @@
+<div class="brand">
+       <!-- <img src="assets/logo.jpg" alt="logo" /-->
+        <font color="green">GramVaani Soochna Sanchar</font></div> 
+
+<h1 align="center">Register Admin Form</h1>
+
+<!--<h2 align="center">Hello <%#= session[:ngoname] %></h2> -->
+
+<%#= simple_form_for @admin, :url => url_for(:action => 'create', :controller => 'admins'), :method => 'post' do |f| %>
+	  <!-- <div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%#= form_for(@user) do |f| %>
+      <%#= render 'shared/error_messages' %>
+
+      <%#= f.label :name %>
+      <%#= f.text_field :name, class: 'form-control' %>
+
+      <%#= f.label :email %>
+      <%#= f.email_field :email, class: 'form-control' %>
+
+      <%#= f.label :password %>
+      <%#= f.password_field :password, class: 'form-control' %>
+
+      <%#= f.label :password_confirmation, "Confirmation" %>
+      <%#= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%#= f.submit "Create my account", class: "btn btn-primary" %>
+    <#% end %>
+  </div>
+</div> <#% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>-->
+   <%= form_for :admin , url: registeradmins_path do |f| %>
+	  
+
+  <% if @admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+ 
+      <ul>
+      <% @admin.errors.full_messages.each do |message| %>
+        <li><font color="red"><%= message %></font></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<%#= @admin.errors.full_messages_for(:ngoname) if @admin.errors[:ngoname].any? %>
+	    <div class="field">
+     <p>
+     	<%= f.label :name, "Admin Name" %><br />
+		<%= f.text_field :name %>      
+	 </p>
+    </div>
+	<%#= @admin.errors.full_messages_for(:adminname) if @admin.errors[:adminname].any? %>
+	<div class="field">
+	 <p>
+	 	<%= f.label :contact %><br />
+	 	<%= f.text_field :contact %>
+	 </p>
+    </div>
+     <%#= @admin.errors.full_messages_for(:age) if @admin.errors[:age].any? %>
+	<div class="field">	 
+	 <p>
+	 	<%= f.label :gender %><br />
+	 	<%= f.text_field :gender %>
+	 </p>
+    </div>
+	 <%#= @admin.errors.full_messages_for(:age) if @admin.errors[:age].any? %>
+	<div class="field">	 
+	 <p>
+	 	<%= f.label :age %><br />
+	 	<%= f.text_field :age %>
+	 </p>
+    </div>
+
+     <%#= @admin.errors.full_messages_for(:city) if @admin.errors[:city].any? %>
+	<div class="field">
+     <p>
+     	<%= f.label :city %><br />
+     	<%= f.text_field :city %>
+	 </p>
+    </div>
+	 <%#= @admin.errors.full_messages_for(:website) if @admin.errors[:website].any? %>
+	<div class="field">
+	 <p>
+	 	<%= f.label :state %><br />
+	 	<%= f.text_field :state %>
+	 </p>
+    </div>
+	 <%#= @admin.errors.full_messages_for(:email) if @admin.errors[:email].any? %>
+	<div class="field">
+	 <p>
+    
+	 	<%= f.label :district %><br />
+	 	<%= f.text_field :district %>
+	 </p>
+    </div>
+	
+     <p>	
+		<%#= f.button :submit %>
+	 </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%#= render 'form' %>
+
+<%= link_to 'Back', registeradmins_path %>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div class="brand">
+  <h1 align="center" ><font color="green">GramVaani Soochna Sanchar</font></h1>
+</div> 
+<h2 align="center">NGO Sign In</h2>
+<!-- 
+<%#= if flash[:error] %>
+	<p><%#= flash[:error] %></p>
+<%# end %> -->
+
+<%= simple_form_for(:session, url: sessions_path) do |f| %>
+      
+<!--   <%# if @ngo_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%#= pluralize(@ngo_user.errors.count, "error") %> prohibited this user from being saved:</h2>
+ 
+      <ul>
+      <%# @ngo_user.errors.full_messages.each do |message| %>
+        <li><font color="red"><%#= message %></font></li>
+      <%# end %>
+      </ul>
+    </div>
+  <%# end %> -->
+
+<div class="field">
+     <p>
+    
+        <%= f.label :email %></br>
+        <%= f.text_field :email %>
+         <!-- <input type="email" class="form-control"> -->
+
+     </p>
+    </div>
+
+    <div class="field">
+     <p>
+        <%= f.label :password %></br>
+        <%= f.text_field :password %>
+        <!-- <input type="password" class="form-control"> -->
+     </p>
+    </div>
+    
+     <p>    
+        <%#= f.button :submit %>
+     </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+ </html>
+<!--          <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <hr>
+                    <p>This page is for the NGO users so that they can sign in to the website.</p>
+                    <form role="form">
+                        <div class="row">
+
+                            <div class="form-group col-lg-4">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Password</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                 <input type="hidden" name="save" value="contact"> 
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<#% end %> -->
+<%#= link_to 'Back', sessions_path %>
+
+    

@@ -1,0 +1,14 @@
+______________________________________Upload Message____________________________________________________________
+
+response = RestClient.post('http://internal.gramvaani.org:8080/vapp/api/v1/sms_message/send/?api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&username=preeti&format=json', "ai" => 352, "message_id" => 24, "caller_ids" => 8826533273 , "max_tries" => 3, "message_args" => {'club'=>'Test', 'date'=>'23-10', 'callback_calls'=>20, 'club_contribs'=>20})
+
+
+______________________________________Upload Audio_______________________________________________________________
+
+containter_object  = Net::HTTP.new('internal.gramvaani.org', 8080).request(Net::HTTP::Post.new('/vapp/api/v1/mnews_news/create_new_item/?ai_id=352&channel_id=5&title=IITD_Item2&api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&username=preeti&format=json'))
+response_object = JSON.parse(containter_object.body)
+
+response_object = RestClient.post("http://internal.gramvaani.org:8080/vapp/api/v1/mnews_news/upload_audio/?ai_id=10&news_id=#{response_object['id']}&api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&username=preeti&format=json", audio_file: File.new('standard.mp3'))
+
+----------------------------------------------------------------
+response = RestClient.post("http://localhost:3000/message/", "messgae" => {"gcmid" => "", message_id" => 24, "caller_ids" => 8826533273 ,"group_ids" => "",  "max_tries" => 3, "message_args" => {'club'=>'Test', 'date'=>'23-10', 'callback_calls'=>20, 'club_contribs'=>20}})

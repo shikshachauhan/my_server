@@ -1,0 +1,1039 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>brendanlim/sms-fu · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="brendanlim/sms-fu" name="twitter:title" /><meta content="sms-fu - Allows you to send an SMS using Ruby for FREE using an email to sms solution." name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/1788?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/1788?v=3&amp;s=400" property="og:image" /><meta content="brendanlim/sms-fu" property="og:title" /><meta content="https://github.com/brendanlim/sms-fu" property="og:url" /><meta content="sms-fu - Allows you to send an SMS using Ruby for FREE using an email to sms solution." property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+        <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="671B082C:3948:1B510F1:55B7E33F" name="octolytics-dimension-request_id" />
+    
+    <meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event" />
+    <meta class="js-ga-set" name="dimension1" content="Logged Out">
+      <meta class="js-ga-set" name="dimension4" content="Current repo nav">
+    <meta name="is-dotcom" content="true">
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <link rel="icon" sizes="any" mask href="https://assets-cdn.github.com/pinned-octocat.svg">
+      <meta name="theme-color" content="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <!-- </textarea> --><!-- '"` --><meta content="authenticity_token" name="csrf-param" />
+<meta content="jrN9kMRqI7QerJEt3eKzaUy962cwDribM/WZe45BMN78CDIttko1Xr2+yIvmt8V8L+77sUu5qDe1Tdt4OMhz/Q==" name="csrf-token" />
+    
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-2de9f2a0dcbebdb929c6fddf7fd94aa06a736743201b9c57db4c19cb74757211.css" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-feb5b225655f913840ce7b017a801ec6d6677ccb67b2965548c4965063ac724c.css" media="all" rel="stylesheet" />
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="e23fc3be5b07883ddbcb7f8f44ee77e2">
+
+      
+  <meta name="description" content="sms-fu - Allows you to send an SMS using Ruby for FREE using an email to sms solution.">
+  <meta name="go-import" content="github.com/brendanlim/sms-fu git https://github.com/brendanlim/sms-fu.git">
+
+  <meta content="1788" name="octolytics-dimension-user_id" /><meta content="brendanlim" name="octolytics-dimension-user_login" /><meta content="5910" name="octolytics-dimension-repository_id" /><meta content="brendanlim/sms-fu" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="5910" name="octolytics-dimension-repository_network_root_id" /><meta content="brendanlim/sms-fu" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/brendanlim/sms-fu/commits/master.atom" rel="alternate" title="Recent Commits to sms-fu:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+
+
+
+        
+        <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="btn btn-primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="btn" href="/login?return_to=%2Fbrendanlim%2Fsms-fu" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/brendanlim/sms-fu/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/brendanlim/sms-fu/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text"
+      class="js-site-search-focus js-site-search-field is-clearable chromeless-input"
+      data-hotkey="s"
+      name="q"
+      placeholder="Search"
+      data-global-scope-placeholder="Search GitHub"
+      data-repo-scope-placeholder="Search"
+      tabindex="1"
+      autocapitalize="off">
+  </label>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu ">
+      <div class="container">
+
+        <div class="clearfix">
+          
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fbrendanlim%2Fsms-fu"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <span class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="/brendanlim/sms-fu/watchers">
+    6
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fbrendanlim%2Fsms-fu"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/brendanlim/sms-fu/stargazers">
+      302
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fbrendanlim%2Fsms-fu"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+      <a href="/brendanlim/sms-fu/network" class="social-count">
+        115
+      </a>
+    </li>
+</ul>
+
+          <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+            <span class="mega-octicon octicon-repo"></span>
+            <span class="author"><a href="/brendanlim" class="url fn" itemprop="url" rel="author"><span itemprop="title">brendanlim</span></a></span><!--
+         --><span class="path-divider">/</span><!--
+         --><strong><a href="/brendanlim/sms-fu" data-pjax="#js-repo-pjax-container">sms-fu</a></strong>
+
+            <span class="page-context-loader">
+              <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+            </span>
+
+          </h1>
+        </div>
+
+      </div>
+    </div>
+
+      <div class="container">
+        <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation">
+          <div class="repository-sidebar clearfix">
+              
+
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/brendanlim/sms-fu/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/brendanlim/sms-fu" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /brendanlim/sms-fu">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="/brendanlim/sms-fu/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /brendanlim/sms-fu/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="js-issue-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull requests">
+      <a href="/brendanlim/sms-fu/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /brendanlim/sms-fu/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Wiki">
+        <a href="/brendanlim/sms-fu/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-selected-links="repo_wiki /brendanlim/sms-fu/wiki">
+          <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/brendanlim/sms-fu/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /brendanlim/sms-fu/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/brendanlim/sms-fu/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /brendanlim/sms-fu/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+                <div class="only-with-full-nav">
+                    
+<div class="js-clone-url clone-url open"
+  data-protocol-type="http">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/brendanlim/sms-fu.git" readonly="readonly" aria-label="HTTPS clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url "
+  data-protocol-type="subversion">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/brendanlim/sms-fu" readonly="readonly" aria-label="Subversion checkout URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+  <div class="clone-options">You can clone with
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone" class="inline-form js-clone-selector-form " data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="UdtAHkt1IWiIyPNH3Rh2agVl92dqSbbVjPP4jLGNjG4ZQPHchCzkefiphqnIM4s4HiszYqN+T7UNPMOna+2MTQ==" /></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form> or <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone" class="inline-form js-clone-selector-form " data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="U0/xlFs1tv5Ejd41gJc7yiPDMtu/O2oMmHSaJXk5Cgm7ubePwX0NJwYRa6WZyony0Hr6/t69mJRbn85b/wKBIQ==" /></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+      <span class="octicon octicon-question"></span>
+    </a>
+  </div>
+
+
+                  <a href="/brendanlim/sms-fu/archive/master.zip"
+                     class="btn btn-sm sidebar-button"
+                     aria-label="Download the contents of brendanlim/sms-fu as a zip file"
+                     title="Download the contents of brendanlim/sms-fu as a zip file"
+                     rel="nofollow">
+                    <span class="octicon octicon-cloud-download"></span>
+                    Download ZIP
+                  </a>
+                </div>
+          </div>
+          <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+
+            
+<span id="js-show-full-navigation"></span>
+
+  <div class="repository-meta js-details-container ">
+    <div class="repository-description">
+      Allows you to send an SMS using Ruby for FREE using an email to sms solution.
+    </div>
+
+    <div class="repository-website">
+      <a href="http://intridea.com/2008/3/30/sms-fu-quickly-easily-send-text-messages" rel="nofollow">http://intridea.com/2008/3/30/sms-fu-quickly-easily-send-text-messages</a>
+    </div>
+
+</div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax href="/brendanlim/sms-fu/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              76
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax href="/brendanlim/sms-fu/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            4
+          </span>
+          branches
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax href="/brendanlim/sms-fu/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            4
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="/brendanlim/sms-fu/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      10
+    </span>
+    contributors
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="/brendanlim/sms-fu/search?l=ruby">
+                <span class="color-block language-color" style="background-color:#701516;"></span>
+                <span class="lang">Ruby</span>
+                <span class="percent">100.0%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="Ruby 100.0%" style="width:100.0%; background-color:#701516;" itemprop="keywords">Ruby</span>
+  </div>
+
+<include-fragment src="/brendanlim/sms-fu/show_partial?partial=tree%2Frecently_touched_branches_list"></include-fragment>
+
+  <div class="file-navigation in-mid-page">
+  <a href="/brendanlim/sms-fu/find/master"
+        class="js-show-file-finder btn btn-sm empty-icon tooltipped tooltipped-s right"
+        data-pjax
+        data-hotkey="t"
+        aria-label="Quickly jump between files"
+        data-ga-click="Repository, find file, location:repo overview">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+    <a href="/brendanlim/sms-fu/compare" aria-label="Compare, review, create a pull request" class="btn btn-sm btn-primary tooltipped tooltipped-se left compare-button" aria-label="Compare &amp; review" data-pjax data-ga-click="Repository, go to compare view, location:repo overview; icon:git-compare">
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    data-ref="master"
+    title="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/brendanlim/sms-fu/tree/1.1.0"
+               data-name="1.1.0"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="1.1.0">
+                1.1.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/brendanlim/sms-fu/tree/gem"
+               data-name="gem"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="gem">
+                gem
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/brendanlim/sms-fu/tree/gh-pages"
+               data-name="gh-pages"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="gh-pages">
+                gh-pages
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/brendanlim/sms-fu/tree/master"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/brendanlim/sms-fu/tree/v1.1.1"
+                 data-name="v1.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.1.1">v1.1.1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/brendanlim/sms-fu/tree/v1.0.3"
+                 data-name="v1.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.0.3">v1.0.3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/brendanlim/sms-fu/tree/v1.0.0"
+                 data-name="v1.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.0.0">v1.0.0</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/brendanlim/sms-fu/tree/plugin"
+                 data-name="plugin"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="plugin">plugin</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/brendanlim/sms-fu" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">sms-fu</span></a></span></span><span class="separator">/</span>
+    <a class="btn-link disabled tooltipped tooltipped-e" href="#" aria-label="You must be signed in to make or propose changes">
+      <span class="octicon octicon-plus"></span>
+    </a>
+</div>
+</div>
+
+
+
+
+
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/brendanlim/sms-fu/commit/2936f6dbb34b2b658c48bf2e527de9433188b604" class="message" data-pjax="true" title="Merge pull request #11 from Chris911/patch-1
+
+Adding Koodoo (Canada)">Merge pull request</a> <a href="https://github.com/brendanlim/sms-fu/pull/11" class="issue-link" title="Adding Koodoo (Canada)">#11</a> <a href="/brendanlim/sms-fu/commit/2936f6dbb34b2b658c48bf2e527de9433188b604" class="message" data-pjax="true" title="Merge pull request #11 from Chris911/patch-1
+
+Adding Koodoo (Canada)">from Chris911/patch-1</a>
+        <span class="hidden-text-expander inline"><a href="#" class="js-details-target">…</a></span>
+    </p>
+      <div class="commit-desc"><pre>Adding Koodoo (Canada)</pre></div>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link tooltipped tooltipped-s" data-clipboard-text="2936f6dbb34b2b658c48bf2e527de9433188b604" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="/brendanlim/sms-fu/commit/2936f6dbb34b2b658c48bf2e527de9433188b604" class="sha-block" data-pjax>latest commit <span class="sha">2936f6dbb3</span></a>
+
+      <div class="authorship">
+        <img alt="@brendanlim" class="avatar" data-user="1788" height="20" src="https://avatars0.githubusercontent.com/u/1788?v=3&amp;s=40" width="20" />
+        <span class="author-name"><a href="/brendanlim" rel="author">brendanlim</a></span>
+        authored <time class="updated" datetime="2014-03-04T22:50:50Z" is="relative-time">Mar 4, 2014</time>
+
+      </div>
+    </div>
+  </div>
+
+
+<div class="file-wrap">
+  <a href="/brendanlim/sms-fu/tree/2936f6dbb34b2b658c48bf2e527de9433188b604" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files" data-pjax>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/tree/master/lib" class="js-directory-link" id="e8acc63b1e238f3255c900eed37254b8-62047b5126ca2713ecebcfe4e4761c1bcc7752b2" title="lib">lib</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/ae3828b49c358e8d9e7c22d84a8040a0040bd2ef" class="message" data-pjax="true" title="Replace RAILS_ROOT with Rails.root in sms_fu.rb
+
+From the Rails 3.0 release notes: 
+
+http://guides.rubyonrails.org/3_0_release_notes.html
+Section 6 - Railties">Replace RAILS_ROOT with Rails.root in sms_fu.rb</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-03-04T22:02:16Z" is="time-ago">Mar 4, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/tree/master/rails" class="js-directory-link" id="4d003d1435f0827cfe18ac2d2a3979e7-993d2f22d2728be3b93e96aa96e409a3c65f8353" title="rails">rails</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/f04b37c5fadbe2f4058782280cc622461b901c0d" class="message" data-pjax="true" title="Reorganizing for gem">Reorganizing for gem</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-08-24T03:09:01Z" is="time-ago">Aug 23, 2010</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/tree/master/tasks" class="js-directory-link" id="2cb1ad4f3eb0ea704c74a73689ad1654-52e90974acd3e48ed3ec4a467e574617fddcdafc" title="tasks">tasks</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/aba05f07d765306b5bd5f6c403a318092a437c0b" class="message" data-pjax="true" title="Initial import">Initial import</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2008-03-30T20:10:05Z" is="time-ago">Mar 30, 2008</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/tree/master/templates" class="js-directory-link" id="fed36e93a0509e20f2dc96cbbd85b678-282c6df80ca5a54fc275cd4ad8f3d1139f10ac08" title="templates">templates</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/2936f6dbb34b2b658c48bf2e527de9433188b604" class="message" data-pjax="true" title="Merge pull request #11 from Chris911/patch-1
+
+Adding Koodoo (Canada)">Merge pull request</a> <a href="https://github.com/brendanlim/sms-fu/pull/11" class="issue-link" title="Adding Koodoo (Canada)">#11</a> <a href="/brendanlim/sms-fu/commit/2936f6dbb34b2b658c48bf2e527de9433188b604" class="message" data-pjax="true" title="Merge pull request #11 from Chris911/patch-1
+
+Adding Koodoo (Canada)">from Chris911/patch-1</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2014-03-04T22:50:50Z" is="time-ago">Mar 4, 2014</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/tree/master/test" class="js-directory-link" id="098f6bcd4621d373cade4e832627b4f6-e07fcbf16beab7b4497dc280de12a2d388b2b118" title="test">test</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/8ce7858e829bb409febe5da6e47fa7d2a691e3d2" class="message" data-pjax="true" title="improved setting of RAILS_CONFIG_ROOT">improved setting of RAILS_CONFIG_ROOT</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2009-10-22T19:37:50Z" is="time-ago">Oct 22, 2009</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/blob/master/.gitignore" class="js-directory-link" id="a084b794bc0759e7a6b77810e01874f2-f541d9a5000176b8fc3ecda8bced3aa46009bb61" title=".gitignore">.gitignore</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/efd3df69b9e232f40cacc0e0b94115e7a57e0238" class="message" data-pjax="true" title="merge adamalex/master and added .gitignore">merge adamalex/master and added .gitignore</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2009-10-22T17:33:01Z" is="time-ago">Oct 22, 2009</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/blob/master/CHANGELOG" class="js-directory-link" id="d3bb3391c79904494c60ee2ac2f33070-5d211096dd1130d8b3ef7374d41076ba288a71f5" title="CHANGELOG">CHANGELOG</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/e941397698e4510f6e0b43a5d933f6d439d53191" class="message" data-pjax="true" title="Updating CHANGELOG">Updating CHANGELOG</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-08-24T03:17:03Z" is="time-ago">Aug 23, 2010</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/blob/master/MIT-LICENSE" class="js-directory-link" id="6d6f69ab160d70085563c5d6eb87b978-35d24910fd04c0d0817dda25f0393c95708479fb" title="MIT-LICENSE">MIT-LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/52beb1ab47be6b5db42e4b420ed409f54e082b3a" class="message" data-pjax="true" title="Now can use ActionMailer or Pony for delivery.  Refactoring as well.">Now can use ActionMailer or Pony for delivery. Refactoring as well.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-08-29T04:43:35Z" is="time-ago">Aug 28, 2010</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/blob/master/README.rdoc" class="js-directory-link" id="cb3e0f2c76a671c083e8f001970f4631-c1b12af0b2336c95a01f389c85039195b82c2cb0" title="README.rdoc">README.rdoc</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/ce2dafa35550f1667ef5601111df02d42c88ec50" class="message" data-pjax="true" title="updating README">updating README</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-08-29T19:31:07Z" is="time-ago">Aug 29, 2010</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/blob/master/Rakefile" class="js-directory-link" id="52c976fc38ed2b4e3b1192f8a8e24cff-86d5669626449f086173f41f5e190fd4fdce8a8a" title="Rakefile">Rakefile</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/52beb1ab47be6b5db42e4b420ed409f54e082b3a" class="message" data-pjax="true" title="Now can use ActionMailer or Pony for delivery.  Refactoring as well.">Now can use ActionMailer or Pony for delivery. Refactoring as well.</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-08-29T04:43:35Z" is="time-ago">Aug 29, 2010</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/blob/master/install.rb" class="js-directory-link" id="cfd287e5017035e0b2e21c032fd4409f-73695a62fc81c77a547a5f9443f1f4d8cef12dad" title="install.rb">install.rb</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/d16925d6f60669d492005b419df212d26b3d21bd" class="message" data-pjax="true" title="Adding in kajeet to carrier list and updated README">Adding in kajeet to carrier list and updated README</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2008-04-19T06:17:51Z" is="time-ago">Apr 19, 2008</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/brendanlim/sms-fu/blob/master/sms_fu.gemspec" class="js-directory-link" id="0446eea60a67edc919e89aff407fedec-b020457b9ba8238b6b672514cb5266a3ea5011cb" title="sms_fu.gemspec">sms_fu.gemspec</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/brendanlim/sms-fu/commit/a32865aef001a833cb0d9538e652bd7335180a0c" class="message" data-pjax="true" title="Updating to 1.1.1">Updating to 1.1.1</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2010-08-29T19:18:45Z" is="time-ago">Aug 29, 2010</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body rdoc">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.rdoc
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage">
+<h1><a id="user-content-sms-fu-sms_fu" class="anchor" href="#sms-fu-sms_fu" aria-hidden="true"><span class="octicon octicon-link"></span></a>SMS Fu (sms_fu)</h1>
+
+<p>Want to send an SMS from your Ruby application?  SMS Fu allows you to do
+just that.   It allows you to send a text message in the form of an e-mail
+to a cell phone on any of the many supported carriers.</p>
+
+<h2><a id="user-content-supported-carriers-us--international-" class="anchor" href="#supported-carriers-us--international-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported Carriers (US &amp; International): </h2>
+
+<p>Alltel, Ameritech, AT&amp;T, Bell Atlantic, BellSouth Mobility,
+Beeline(UA), BlueSkyFrog,  Boost Mobile, BPL Mobile, Cellular South, Claro
+(Brazil, Nicaragua), Comcast, Du,  E-Plus, Etisalat, Fido, kajeet, Mobinil,
+Mobitel, Movistar, Metro PCS, O2, Orange,  Powertel, PSC Wireless, Qwest,
+Rogers, Southern Link, Sprint, Suncom,  T-Mobile (US/UK/Germany),
+Telefonica, Tracfone, Virgin Mobile, Verizon Wireless,  Vodafone (UK,
+Egypt, Italy, Japan, Spain), and many more …</p>
+
+<p>Some International carriers require that their users subscribe to an Email
+to SMS feature before they are able to receive SMS messages this way.  If
+one your users mentions that they are not receiving their messages, chances
+are it is due to this limitation.  Some of these carriers are include,
+Mobitel, Etisalat, T-Mobile (Netherlands).</p>
+
+<h2><a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+<ul><li>
+<p>SMS Fu requires that 'action_mailer' (&gt;= 3.0.0rc2) and
+'pony' (&gt;= 1.0) are installed.</p>
+</li><li>
+<p>If you require SMS Fu on an older version of ActionMailer, make sure to use
+the older plugin version of SMS Fu at <a href="http://github.com/brendanlim/sms-fu/tree/plugin">github.com/brendanlim/sms-fu/tree/plugin</a></p>
+</li></ul>
+
+<h2><a id="user-content-setup-instructions" class="anchor" href="#setup-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup Instructions</h2>
+<ul><li>
+<p>Install sms_fu gem</p>
+
+<p>sudo gem install sms_fu</p>
+</li><li>
+<p>Add sms_fu.yml to your config folder (Rails only)</p>
+
+<p><a href="http://github.com/brendanlim/sms-fu/blob/master/templates/sms_fu.yml">github.com/brendanlim/sms-fu/blob/master/templates/sms_fu.yml</a></p>
+</li><li>
+<p>(Optional) Modify sms_fu.yml in your config folder with your reply-to
+e-mail address.</p>
+</li></ul>
+
+<h2><a id="user-content-numbers-and-carriers" class="anchor" href="#numbers-and-carriers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Numbers and Carriers</h2>
+<ul><li>
+<p>You have to send in the phone number, without any non-numeric characters. 
+The phone numbers must be 10 digits in length.</p>
+</li><li>
+<p>The two required parameters are the phone number and the phone carrier.</p>
+</li><li>
+<p>Here are some of the default carrier values:</p>
+</li></ul>
+
+<p></p>
+
+<pre>Alltel Wireless   =&gt;  "alltel"
+AT&amp;T/Cingular     =&gt;  "at&amp;t"
+Boost Mobile      =&gt;  "boost"
+Sprint Wireless   =&gt;  "sprint"
+T-Mobile US       =&gt;  "t-mobile"
+T-Mobile UK       =&gt;  "t-mobile-uk"
+Virgin Mobile     =&gt;  "virgin"
+Verizon Wireless  =&gt;  "verizon"
+Vodafone Tokyo    =&gt;  "vodafone-jp-tokyo"</pre>
+<ul><li>
+<p>Check sms_fu.yml for a complete list of supported carriers, including
+international carriers as well.</p>
+</li></ul>
+
+<h2><a id="user-content-configuration-and-usage" class="anchor" href="#configuration-and-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration and Usage</h2>
+<ul><li>
+<p>SMS Fu relies on either ActionMailer or Pony for delivery.  You can now
+specify  which you'd like to use for delivery.</p>
+</li><li>
+<p>You can use your ActionMailer settings by just specifying the :delivery
+option as  :action_mailer.</p>
+</li><li>
+<p>If you would like to use Pony, you can configure it to use :sendmail or
+:smtp via  Pony.  Set the :delivery option to :pony and then make sure to
+include :pony_config as well</p>
+
+<pre># ActionMailer delivery
+sms_fu = SMSFu::Client.configure(:delivery =&gt; :action_mailer)
+
+# Pony delivery via Sendmail
+sms_fu = SMSFu::Client.configure(:delivery =&gt; :pony, :pony_config =&gt; { :via =&gt; :sendmail })
+
+# Pony delivery via SMTP
+PONY_CONFIG = { 
+  :via =&gt; :smtp, 
+  :via_options =&gt; {
+    :address              =&gt; 'smtp.gmail.com',
+    :port                 =&gt; '587',
+    :user_name            =&gt; 'username',
+    :password             =&gt; 'password',
+    :authentication       =&gt; :plain, 
+    :enable_starttls_auto =&gt; true,
+    :domain               =&gt; "localhost.localdomain"
+}}
+
+sms_fu = SMSFu::Client.configure(:delivery =&gt; :pony, :pony_config =&gt; PONY_CONFIG)</pre>
+</li><li>
+<p>You can view more pony 'via_options' at <a href="http://github.com/benprew/pony">github.com/benprew/pony</a></p>
+</li><li>
+<p>Basic SMS delivery</p>
+
+<pre>sms_fu.deliver("5558675309","at&amp;t","message")</pre>
+</li><li>
+<p>If you want to set a custom from e-mail per SMS message, you can do so  by
+doing the following.</p>
+
+<pre>sms_fu.deliver("5558675309","at&amp;t","message", :from =&gt; "bob@test.com")</pre>
+</li><li>
+<p>You can set the maximum length of the SMS message, which is not set by
+default.  Most phones can only accept 128 characters.  To do this just 
+specify the limit option.</p>
+
+<pre>sms_fu.deliver("5558675309","at&amp;t","message", :limit =&gt; 128)</pre>
+</li><li>
+<p>You can retrieve just the formatted address to use in your own mailer.</p>
+
+<pre>SMSFu.sms_address("5558675309","at&amp;t") # =&gt; "5558675309@txt.att.net"</pre>
+</li></ul>
+
+<h2><a id="user-content-view-helpers-rails" class="anchor" href="#view-helpers-rails" aria-hidden="true"><span class="octicon octicon-link"></span></a>View Helpers (Rails)</h2>
+<ul><li>
+<p>Retrieve a collection of all carriers</p>
+
+<pre>&lt;%= carrier_collection %&gt;</pre>
+</li><li>
+<p>Display a select box with mobile carriers</p>
+
+<pre>&lt;%= carrier_select %&gt;</pre>
+</li><li>
+<p>Display a custom select box with mobile carriers</p>
+
+<pre>&lt;%= carrier_select('user[carrier_name]', "Please choose a carrier") %&gt;</pre>
+</li></ul>
+
+<h2><a id="user-content-special-thanks" class="anchor" href="#special-thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Special Thanks</h2>
+
+<p>I want to thank the following individuals with their help with adding some
+patches to SMS Fu:</p>
+<ul><li>
+<p>Brent Collier (brentmc79)</p>
+</li><li>
+<p>Peter Boling (pboling)</p>
+</li><li>
+<p>Mike (mic)</p>
+</li></ul>
+
+<p>Copyright © 2010 Brendan G. Lim, Intridea, Inc., released under the MIT
+license</p>
+</article>
+  </div>
+
+
+          </div>
+        </div>
+        <div class="modal-backdrop"></div>
+      </div>
+  </div>
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.05113s from github-fe140-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
+      <div class="suggester-container">
+        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-01a8766fbba2df04677b68fb73599499b1ff20bcc969342c28d30f95fa836d0c.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github/index-0a6831eed7acaf8b173663c8626749024571c7030a13c7539f3f0a17b217a99f.js"></script>
+      
+      
+  </body>
+</html>
+

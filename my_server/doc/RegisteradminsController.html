@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class RegisteradminsController - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="LocationHelper.html">LocationHelper</a>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-create">#create</a>
+    
+    <li ><a href="#method-i-destroy">#destroy</a>
+    
+    <li ><a href="#method-i-edit">#edit</a>
+    
+    <li ><a href="#method-i-getlocations">#getlocations</a>
+    
+    <li ><a href="#method-i-index">#index</a>
+    
+    <li ><a href="#method-i-new">#new</a>
+    
+    <li ><a href="#method-i-show">#show</a>
+    
+    <li ><a href="#method-i-update">#update</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-RegisteradminsController">
+  <h1 id="class-RegisteradminsController" class="class">
+    class RegisteradminsController
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+    <span class="ruby-identifier">pin</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">pin</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">111111</span>  <span class="ruby-keyword">do</span>
+       <span class="ruby-identifier">pin</span> = <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">random_number</span>(<span class="ruby-value">999999</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Ngoname&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:ngoname</span>]
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>]
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>]
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>]
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:contact</span>]
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>]
+    <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">name</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">contact</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:contact</span>], <span class="ruby-identifier">gender</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:gender</span>], <span class="ruby-identifier">age</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:age</span>], <span class="ruby-identifier">city</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;-&#39;</span>)[<span class="ruby-value">0</span>], <span class="ruby-identifier">state</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;-&#39;</span>)[<span class="ruby-value">0</span>], <span class="ruby-identifier">block</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;-&#39;</span>)[<span class="ruby-value">1</span>], <span class="ruby-identifier">district</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;-&#39;</span>)[<span class="ruby-value">2</span>], <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:location</span>], <span class="ruby-identifier">created_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>, <span class="ruby-identifier">updated_at</span><span class="ruby-operator">:</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">inspect</span>)
+    <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">user_id</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">pin</span><span class="ruby-operator">:</span> <span class="ruby-identifier">pin</span>, <span class="ruby-identifier">logged_in</span><span class="ruby-operator">:</span> <span class="ruby-value">0</span> )
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">present?</span>
+      <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;#{params[:name]} having the mobile number #{params[:contact]} has been registered by NGO #{session[:ngoname]} as an admin for Gram vaani. Use PIN #{pin} for authentication. Link to download the app: http://gramvaani.org:8080/GCMFinal.apk&quot;</span>
+      <span class="ruby-identifier">response</span> = <span class="ruby-constant">Unirest</span>.<span class="ruby-identifier">get</span>(<span class="ruby-node">&quot;https://webaroo-send-message-v1.p.mashape.com/sendMessage?message=#{message}&amp;phone=#{params[:contact]}&quot;</span>,<span class="ruby-identifier">headers</span>{{<span class="ruby-string">&quot;X-Mashape-Key&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;f06AZcQGeAmshIDGUUTrEys1oikdp1J69xSjsn08nRoXRaVURu&quot;</span>})
+      <span class="ruby-identifier">puts</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>
+    
+      <span class="ruby-comment">#redirect_to @admin, notice: &#39;Admin successfully created.&#39;  #doesn&#39;t work</span>
+      <span class="ruby-comment">#redirect_to registeradmins_path  #redirects to index</span>
+       <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;show&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;new&quot;</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">destroy</span>
+ 
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">registeradmins_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-getlocations" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getlocations</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="getlocations-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getlocations</span>
+  <span class="ruby-ivar">@response</span> = <span class="ruby-identifier">getlocation</span>()
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Got all Locations!&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@response</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@admins</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/registeradmins_controller.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+ 
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">user_params</span>)
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@admin</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;edit&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

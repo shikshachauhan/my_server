@@ -1,0 +1,76 @@
+<%= simple_form_for(:session, :url => sessions_path) do |f| %>
+	<%= f.input :email %>
+	<%= f.input :password %>
+		 <p>
+    	<%= f.submit "Submit" %>
+     </p>  
+<% end %>
+
+
+  Parameters: {"message_args"=>"{\"callback_calls\":20,\"date\":\"15.07.2015\",\"club_contribs\":40,\"club\":\"Come for attending seminar.\"}", "caller-ids"=>"+918800244743,+918860934323,+918860945558,+919452689136,+919868147932", "message"=>{}}
+
+
+preetirani07@gmail.com
+
+
+# Pony delivery via Sendmail
+# sms_fu = SMSFu::Client.configure(:delivery => :pony, :pony_config => { :via => :sendmail })
+
+# # Pony delivery via SMTP
+# PONY_CONFIG = { 
+#   :via => :smtp, 
+#   :via_options => {
+#     :address              => 'smtp.gmail.com',
+#     :port                 => '587',
+#     :user_name            => 'username',
+#     :password             => 'password',
+#     :authentication       => :plain, 
+#     :enable_starttls_auto => true,
+#     :domain               => "localhost.localdomain"
+# # }}
+
+# sms_fu = SMSFu::Client.configure(:delivery => :pony, :pony_config => PONY_CONFIG)
+
+
+
+  	# ActionMailer delivery
+    # render json: { message: 'Message uploaded successfully', messagevalue: response }, status: 200
+
+# Pony delivery via Sendmail
+# sms_fu = SMSFu::Client.configure(:delivery => :pony, :pony_config => { :via => :sendmail })
+
+# # Pony delivery via SMTP
+# PONY_CONFIG = { 
+#   :via => :smtp, 
+#   :via_options => {
+#     :address              => 'smtp.gmail.com',
+#     :port                 => '587',
+#     :user_name            => 'username',
+#     :password             => 'password',
+#     :authentication       => :plain, 
+#     :enable_starttls_auto => true,
+#     :domain               => "localhost.localdomain"
+# # }}
+
+# sms_fu = SMSFu::Client.configure(:delivery => :pony, :pony_config => PONY_CONFIG)
+    # sms_fu = SMSFu::Client.configure(:delivery => :action_mailer)
+    # sms_fu.deliver("8826533273","at&t","message", :from => "bob@test.com")
+    # deliver_sms("8826533273","AT&T","Really long message ...", :limit => 128)
+
+<!-- 
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+ -->
+
+ add_foreign_key :admins , :users
+
+           sessions GET    /sessions(.:format)                sessions#index
+                   POST   /sessions(.:format)                sessions#create
+       new_session GET    /sessions/new(.:format)            sessions#new
+      edit_session GET    /sessions/:id/edit(.:format)       sessions#edit
+           session GET    /sessions/:id(.:format)            sessions#show
+                   PATCH  /sessions/:id(.:format)            sessions#update
+                   PUT    /sessions/:id(.:format)            sessions#update
+                   DELETE /sessions/:id(.:format)            sessions#destroy

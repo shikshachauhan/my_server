@@ -1,0 +1,92 @@
+s<div class="brand">
+       <!-- <img src="assets/logo.jpg" alt="logo" /-->
+        <font color="green">GramVaani Soochna Sanchar</font></div> 
+
+<h1 align="center">Register Admin Form</h1>
+
+
+<%#= simple_form_for @user, :url => url_for(:action => 'create', :controller => 'users'), :method => 'post' do |f| %>
+	  
+   <%= simple_form_for(@user) do |f| %>
+	  
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+ 
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><font color="red"><%= message %></font></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<%#= @user.errors.full_messages_for(:ngoname) if @user.errors[:ngoname].any? %>
+	    <div class="field">
+     <p>
+     	<%= f.label :name, "Admin Name" %><br />
+		<%= f.text_field :name %>      
+	 </p>
+    </div>
+	<%#= @user.errors.full_messages_for(:username) if @user.errors[:username].any? %>
+	<div class="field">
+	 <p>
+	 	<%= f.label :contact %><br />
+	 	<%= f.text_field :contact %>
+	 </p>
+    </div>
+     <%#= @user.errors.full_messages_for(:age) if @user.errors[:age].any? %>
+	<div class="field">	 
+	 <p>
+	 	<%= f.label :gender %><br />
+	 	<%= f.text_field :gender %>
+	 </p>
+    </div>
+	 <%#= @user.errors.full_messages_for(:age) if @user.errors[:age].any? %>
+	<div class="field">	 
+	 <p>
+	 	<%= f.label :age %><br />
+	 	<%= f.text_field :age %>
+	 </p>
+    </div>
+
+     <%#= @user.errors.full_messages_for(:city) if @user.errors[:city].any? %>
+	<div class="field">
+     <p>
+     	<%= f.label :city %><br />
+     	<%= f.text_field :city %>
+	 </p>
+    </div>
+	 <%#= @user.errors.full_messages_for(:website) if @user.errors[:website].any? %>
+	<div class="field">
+	 <p>
+	 	<%= f.label :state %><br />
+	 	<%= f.text_field :state %>
+	 </p>
+    </div>
+	 <%#= @user.errors.full_messages_for(:email) if @user.errors[:email].any? %>
+	<div class="field">
+	 <p>
+    
+	 	<%= f.label :district %><br />
+	 	<%= f.text_field :district %>
+	 </p>
+    </div>
+	<div class="field">
+	 <p>
+    
+	 	<%= f.label :location %><br />
+	 	<%= f.text_field :location %>
+	 </p>
+    </div>
+     <p>	
+		<%#= f.button :submit %>
+	 </p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%#= render 'form' %>
+
+<%= link_to 'Back', users_path %>

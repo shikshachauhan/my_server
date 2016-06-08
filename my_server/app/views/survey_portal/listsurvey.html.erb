@@ -1,0 +1,39 @@
+<div class="brand">
+  <font color="blue"><strong>Active surveys</strong></font>
+</div>
+<head>
+  <style>
+    /*table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }*/
+    th, td {
+      color: black;
+      padding: 5px;
+    }
+    th {
+      color: black;
+      text-align: center;
+    }
+  </style>
+</head>
+<table cellspacing="10"  style="width:100%">
+  <tr>
+    <th>FORM ID</th>
+    <th>SURVEY ID</th>
+    <th>NAME</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @response['objects'].each do |r| %>
+      <tr>
+        <td><%= r['form']['id'] %></td>
+        <td><%= r['id'] %></td>
+        <td><%= r['name'] %></td>
+        <!--<td><%#= button_to "View Questions", {:controller => "survey", :action => "survey_question", :form_id => r['form']['id']} , :method=>:post , :class => "button"  %></td> -->
+        <td><%= link_to "View Questions", survey_portal_survey_question_path(:form_id => r['form']['id']), :method => :post , :class => "btn btn-default" %></td>
+        <td><%= link_to "View Response", survey_portal_survey_response_path(:survey_id => r['id']), :method => :post , :class => "btn btn-default" %></td>
+
+      </tr>
+  <% end %>
+</table>
