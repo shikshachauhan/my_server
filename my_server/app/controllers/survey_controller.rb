@@ -1,4 +1,5 @@
 class SurveyController < ApplicationController #1
+  include SurveyPortalHelper
   def createsurvey
     @response = RestClient.get("#{@gv_ip}/vapp/api/v1/survey_survey/?ai=60&api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&username=preeti&format=json")
     @response = JSON.parse(@response.body)
@@ -21,9 +22,8 @@ class SurveyController < ApplicationController #1
   end
   #Get all the surveys on the app
   def listsurvey_app
-    response = RestClient.get("#{@gv_ip}/vapp/api/v1/survey_survey/?api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&username=preeti&format=json")
-    response = JSON.parse(response.body)
-    if response['objects']
+    response = getsurvey(params[ai_id].to_i)
+    if response.present?
       puts "Got all surveys!"
       render json: { message: response }, status: 200  
       else
@@ -34,15 +34,25 @@ class SurveyController < ApplicationController #1
 
   #Get all the questions of a particular survey given the form id on the app.
   def getsurveyquestion_app
-    form = params[:form_id].to_i
-    response = RestClient.get("#{@gv_ip}/vapp/api/v1/form_question/?form_id=#{form}&ai=60&api_key=38dc9ea2dc8878b8ac674b3baef02d1973de5362&username=preeti&format=json")
-    response = JSON.parse(response.body)
-    if response['objects']
+    response = getsurvey_question(params[:form_id].to_i)
+    if response.present?
       puts "Got all survey questions!"
       render json: { message: response }, status: 200  
       else
       puts "Could not get survey questions!"
       render json: { message: 'Could not get survey questions!'}, status: 403
+    end
+  end
+
+  #Get all the responses of a particular survey given the survey id on the app.
+  def getsurveyresponse_app
+    response = getsurvey_response(params[:survey_id].to_i, params[:ai_id].to_i)
+    if response.present?
+      puts "Got all survey responses!"
+      render json: { message: response }, status: 200
+    else
+      puts "Could not get survey responses!"
+      render json: { message: 'Could not get survey responses!'}, status: 403
     end
   end
 

@@ -4,7 +4,7 @@ module SessionsHelper
 		session[:ngo_user_id] = ngo_user.id
 		self.current_user = ngo_user
 		puts "******************session[:ngo_user_id] #{session[:ngo_user_id]}**********************************"
-		puts "****************************@current_user #{@current_user}****************************************"
+		puts "****************************@current_user #{@current_user.ngoname}****************************************"
 	end
 
 	def current_user=(ngo_user)
@@ -22,6 +22,8 @@ module SessionsHelper
 
 	def sign_out
 		session[:ngo_user_id] = nil
+		session[:selected_survey] = nil
+		session[:selected_location] = nil
 		session.delete(:ngo_user_id)
 		self.current_user = nil
 	end

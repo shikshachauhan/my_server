@@ -21,10 +21,14 @@ module LocationHelper
 				response = JSON.parse(response.body)
 		    if response['objects'] #3
 		        puts "Got all Locations!"
+						response['objects'].each do |sur| #4
+							#Rails.logger.info sur['id']
+							p sur['desc']
+						end#4
 		    else #3
 		        puts "Could not get locations!"
 		    end #3
-	    end #2
+	    end #9
 	    return response
   end #1.1
 end

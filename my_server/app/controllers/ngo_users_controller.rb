@@ -1,5 +1,5 @@
 class NgoUsersController < ApplicationController #1
-  before_filter :authenticate
+
   def new
   	#@ngo_user = NgoUser.new
   end

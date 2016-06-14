@@ -1,10 +1,25 @@
-<div class="brand">
-  <font color="blue">Survey Questions</font>
-</div>
-<h3><center><strong>Form ID = 70</strong></center></h3>
-<head>
-  <style>
+<!DOCTYPE html>
+<html lang="en">   <!-- 1 -->
 
+<head> <!-- 2 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>GramVaani Soochna Sanchar</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/assets/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/assets/business-casual.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+  <style>
     /*table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
@@ -18,30 +33,148 @@
       text-align: center;
     }
   </style>
-</head>
+</head> <!-- 2  -->
 
-<table cellspacing="10"  style="width:100%">
-  <tr>
-    <th>TEXT</th>
-    <th>TYPE</th>
-    <th>OTHER</th>
-    <th colspan="3"></th>
-  </tr>
+<body> <!-- 3 -->
+<div class="brand">  <!--  3 -->
+  <img src="/assets/logo.jpg" alt="logo" />
 
-  <% @response['objects'].each do |r| %>
-      <tr>
-        <td><%= r['question']['text'] %></td>
-        <% case r['question']['type']
-             when "mc" %>
-            <td>Multiple Choice</td>
-            <td>Choices <%= r['question']['choices'] %></td>
-        <% when "ff" %>
-            <td>Voice Reponse</td>
-            <td>Max Duration <%= r['question']['max_duration'] %></td>
-        <% when "qu" %>
-            <td>Quantitative</td>
-            <td>Max Digits <%= r['question']['max_digits'] %></td>
-        <% end %>
-      </tr>
-  <% end %>
-</table>
+  <h1><font color="white" face="Verdana" size="20">GRAMVAANI SOOCHNA SANCHAR</font></h1>
+</div>  <!--  3 -->
+<!-- Navigation bar -->
+<font > <!-- 4  -->
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"-->
+      <div class="single-page-nav sticky-wrapper" id="tmNavbar">
+        <ul class="nav navbar-nav">
+          <li>
+            <%= link_to 'Register Admin'.html_safe, :action =>'new', :controller => 'registeradmins' %>
+          </li>
+          <li>
+            <%= link_to 'Launch Survey'.html_safe, :action => 'create', :controller => 'survey_portal' %>
+          </li>
+          <li>
+            <%= link_to 'View Surveys'.html_safe, :action => 'listsurvey',  :controller => 'survey_portal' %>
+          </li>
+          <li class="dropdown pull-right">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account<strong class="caret"></strong></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Settings</a>
+              </li>
+              <li>
+                <%= link_to('Logout'.html_safe, sessions_delete_path, method: :delete) %>
+              </li>
+              <!--:data =>  (confirm => "Are you sure?"} -->
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+  </nav>
+</font>  <!--  4 -->
+<!--div class="top-content"--> <!-- 4 --><!-- Top content -->
+<!--div class="inner-bg"-->
+<div class="container"> <!-- 5 -->
+  <div class="row"> <!-- 6 -->
+    <div class="form-box"> <!-- 7 -->
+      <div class="form-top"> <!-- 8 -->
+        <h3  align="center"><font color="Black"><strong>Questions of FORM ID <%= @form_id %></strong></font></h3>
+        <table cellspacing="10"  style="width:100%">
+          <tr>
+            <th>Question ID</th>
+            <th>TEXT</th>
+            <th>TYPE</th>
+            <th>OTHER</th>
+            <th>Audio Prompt</th>
+          </tr>
+
+          <% @question_response['objects'].each do |r| %>
+              <tr>
+                <td align="center"><%= r['question']['id'] %></td>
+                <td align="center"><%= r['question']['text'] %></td>
+                <% case r['question']['type']
+                     when "mc" %>
+                    <td align="center">Multiple Choice</td>
+                    <td align="center"><strong>Choices : </strong><%= r['question']['choices'] %></td>
+                <% when "ff" %>
+                    <td align="center">Voice Reponse</td>
+                    <td align="center"><strong>Max Duration : </strong><%= r['question']['max_duration'] %></td>
+                <% when "qu" %>
+                    <td align="center">Quantitative</td>
+                    <td align="center"><strong>Max Digits : </strong><%= r['question']['max_digits'] %></td>
+                <% end %>
+                <td align="center"><%= link_to "Listen Audio Prompt", "#{r['question']['prompt_audio']['url']}" , :class => "btn btn-default" %></td>
+
+              </tr>
+          <% end %>
+        </table>
+      </div> <!-- 8 -->
+    </div> <!-- 7 -->
+  </div> <!-- 6 -->
+</div> <!-- 5 -->
+<!--/div-->
+<!--/div--> <!-- 4-->
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <p>Copyright &copy; GramVaani</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="/assets/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/assets/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.dropdown-toggle').dropdown();
+  });
+</script>
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel').carousel({
+    interval: 5000 //changes the speed
+  })
+</script>
+<!-- Javascript -->
+<script src="/assets/jquery-1.11.1.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/jquery.backstretch.min.js"></script>
+<script src="/assets/scripts.js"></script>
+
+<!--[if lt IE 10]>
+<script src="/assets/placeholder.js"></script>
+<![endif]-->
+
+
+
+</body> <!-- 3 -->
+
+</html> <!-- 1 -->
+

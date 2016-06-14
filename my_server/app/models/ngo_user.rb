@@ -6,17 +6,10 @@ class NgoUser < ActiveRecord::Base
 	validates   :ngoname, :presence => true,
 				:length 		   => {:maximum => 50},
 				:uniqueness    => {:case_sensitive => false}
-	validates	:username,  :presence => true,
-				:length 		   => {:maximum => 50},
-				:uniqueness    => {:case_sensitive => false}
 	validates	:password,  :presence => true,
-				:length 		   => {:within => 6..40},
-				:confirmation => true
+				:length 		   => {:within => 6..40}
 	#before_save :encrypt_password => :password
-	validates	:age, :presence => true,
-				:length 		   => {:maximum => 50}
 	validates	:phone, :presence => true,
-				:length 		   => { is: 10 },
 				:numericality => { :only_integer => true },
 				:uniqueness    => {:case_sensitive => false}
 	validates	:city, :presence => true,

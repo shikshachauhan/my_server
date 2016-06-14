@@ -1,173 +1,212 @@
 <!DOCTYPE html>
 <html lang="en"> <!-- 1.1 -->
 <!--   -->
-<head> <!-- 1 -->
+  <head> <!-- 1 -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>GramVaani Soochna Sanchar</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="/assets/bootstrap.min.css" rel="stylesheet">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>GramVaani Soochna Sanchar</title>
+      <!-- Bootstrap Core CSS -->
+      <link href="/assets/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="/assets/business-casual.css" rel="stylesheet">
- 
-    <!-- Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+      <!-- Custom CSS -->
+      <link href="/assets/business-casual.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <!-- Fonts -->
+      <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
-</head> <!-- 1  -->
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head> <!-- 1  -->
 
-<body> <!-- 2  -->
+  <body> <!-- 2  -->
 
-    <div class="brand">  <!--  3 -->
-        <img src="/assets/logo.jpg" alt="logo" />
+      <div class="brand">  <!--  3 -->
+          <img src="/assets/logo.jpg" alt="logo" />
 
-        <h1><font color="white" face="Verdana" size="20">GRAMVAANI SOOCHNA SANCHAR</font></h1>
-    </div>  <!--  3 -->
-     <!-- Navigation bar -->
-  <font size = 4> <!-- 4  -->
+          <h1><font color="white" face="Verdana" size="20">GRAMVAANI SOOCHNA SANCHAR</font></h1>
+      </div>  <!--  3 -->
+       <!-- Navigation bar -->
+    <font size = 4> <!-- 4  -->
 
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
+      <nav class="navbar navbar-default" role="navigation"> <!-- 5 -->
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Brand</a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"-->
+              <div class="single-page-nav sticky-wrapper" id="tmNavbar">
+                  <ul class="nav navbar-nav">
+
+                       <li>
+                          <!--a href="#section1">Homepage</a-->
+                          <%= link_to 'Home', :action => 'homepage', :controller => 'welcome' %>
+                      </li>
+                      <li>
+                          <%= link_to 'Signup', :action => 'new', :controller => 'ngo_users' %>
+                      </li>
+                      <li>
+                          <%= link_to 'Sign In', :action => 'new', :controller => 'login_portal' %>
+                      </li>
+                      <li>
+                          <%= link_to 'Contact', :action => 'contact', :controller => 'welcome' %>
+                      </li>
+
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </nav> <!-- 5 -->
+    </font>  <!--  4 -->
+
+      <div class="container"> <!--  5 -->
+          <div class="row"> <!-- 6  -->
+              <div class="box"> <!--  7 -->
+                  <div class="col-md-12 text-center"> <!--  8 -->
+                      <div id="carousel-example-generic" class="carousel slide"> <!--  9 -->
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                          </ol>
+
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner"> <!--  10 -->
+                              <div class="item active">
+                                  <img alt="Carousel First" class="img-responsive img-full" src="/assets/e-gov.gif" alt="">
+                              </div>
+                              <div class="item">
+                                  <img class="img-responsive img-full" src="/assets/survey3.jpg" alt="">
+                              </div>
+                              <div class="item">
+                                  <img class="img-responsive img-full" src="/assets/phone3.jpg" alt="">
+                              </div>
+                          </div> <!--  10 -->
+                          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="glyphicons glyphicons-chevron-left"></a>
+                          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="glyphicons glyphicons-chevron-right"></span></span></a>
+                      </div> <!--  9 -->
+                  </div> <!--  8 -->
+              </div> <!--  7 -->
+          </div> <!--  6 -->
+          <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                  <div class="thumbnail">
+                    <img alt="Functionality 1" src="/assets/Survey.jpg">
+                    <div class="caption">
+                      <h3 style="color:darkblue;"><strong>Launch a Survey</strong></h3>
+                      <p>
+                        Launch a survey at a location. Select a survey from the active surveys. Select a location from the list. Select admin volunteer at the location. The admin voluteer will get GCM notification to launch the survey. And there you go!!!
+                      </p>
+                      <p>
+                        <a class="btn btn-primary" href="/login_portal/new">Launch a survey now</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="thumbnail">
+                    <img alt="Functionality 2" src="/assets/reg3.jpg" >
+                    <div class="caption">
+                      <h3 style="color:darkblue;"><strong>Register an Admin</strong></h3>
+                      <!--p>
+                        NGO can register a new admin volunteer at a location by filling all the necessary details of the admin. The admin will receive a 6 digit pin though SMS for one time login through the app. Once the admin is logged in to the app, he/she is authorized to send SMS, audio announcements and launch new surveys after getting notifications from the NGO.
+                      </p-->
+                      <p>
+                        NGO can register a new admin volunteer at a location by filling all the necessary details of the admin. The registered admin will receive notifications whenever NGO launches a survey.
+                      </p>
+                      <p>
+                        <a class="btn btn-primary" href="/login_portal/new">Register an admin now</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="thumbnail">
+                    <img alt="Functionality 3" src="/assets/survey results1.png">
+                    <div class="caption">
+                      <h3 style="color:darkblue;"><strong>View Surveys</strong></h3>
+                      <p>
+                        NGO can assess the surveys by viewing the active surveys, questions in each survey, listening to the audio prompts of the questions and reviewing the responses received corresponding to each survey.
+                      </p>
+                      <p>
+                        <a class="btn btn-primary" href="/login_portal/new">View the surveys now</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"-->
-            <div class="single-page-nav sticky-wrapper" id="tmNavbar">
-                <ul class="nav navbar-nav">
-                   
-                     <li>
-                        <!--a href="#section1">Homepage</a-->
-                        <%= link_to 'Home', :action => 'homepage', :controller => 'welcome' %>
-                    </li>
-                    <li>
-                        <%= link_to 'Signup', :action => 'new', :controller => 'ngo_users' %>
-                    </li>
-                    <li>
-                        <%= link_to 'Sign In', :action => 'new', :controller => 'login_portal' %>
-                    </li>
-                    <li>
-                        <%= link_to 'Contact', :action => 'contact', :controller => 'welcome' %>
-                    </li>   
-                              
-                </ul>
+          </div>
+          <div class="row"> <!--  11 -->
+              <div class="box"> <!--  12 -->
+                  <div class="col-lg-12"> <!--  13 -->
+                      <hr>
+                      <h2 class="intro-text text-center"> About GramVaani Soochna Sanchar </h2>
+                      <hr>
+                      <!--img class="img-responsive img-border img-left" src="/assets/e-gov.gif" alt=""-->
+                      <!--hr class="visible-xs"-->
+                      <p>This web portal provides the Government/Non Government Organisation personnel to spread information through this central point.</p>
+                      <p> The portal allows its NGO users to add the information of human access points who are the responsible people of the society on the portal which also gets stored in the GramVaani Database.  </p>
+                      <p>Gram Vaani provides the information of all the campaigns running in the  rural areas in different parts of the country which can be seen here <a href="http://www.gramvaani.org/" target="_blank">Gram Vaani official website </a> </p>
+                      <p>This portal allows the NGO users to launch surveys to be taken in tne rural areas.</p>
+                  </div> <!--  13 -->
+              </div> <!--  12 -->
+          </div> <!--  11 -->
+      </div> <!--  5 -->
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <p>Copyright &copy; GramVaani</p>
             </div>
-            <!-- /.navbar-collapse -->
+          </div>
         </div>
-        <!-- /.container -->
-    </nav>
-  </font>  <!--  4 -->
+      </footer>
 
-    <div class="container"> <!--  5 -->
+      <!-- jQuery -->
+      <script src="/assets/jquery.js"></script>
 
-        <div class="row"> <!-- 6  -->
-            <div class="box"> <!--  7 -->
-                <div class="col-md-12 text-center"> <!--  8 -->
-                    <div id="carousel-example-generic" class="carousel slide"> <!--  9 -->
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="/assets/bootstrap.min.js"></script>
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner"> <!--  10 -->
-                            <div class="item active">
-                                <img alt="Carousel First" class="img-responsive img-full" src="/assets/e-gov.gif" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="/assets/survey3.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="/assets/phone3.jpg" alt="">
-                            </div>
-                        </div> <!--  10 -->
-                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="glyphicons glyphicons-chevron-left"></a> 
-                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="glyphicons glyphicons-chevron-right"></span></span></a> 
-                    </div> <!--  9 -->
-                </div> <!--  8 -->
-            </div> <!--  7 -->
-        </div> <!--  6 --> 
+      <script>
+        $(document).ready(function () {
+          $('.dropdown-toggle').dropdown();
+        });
+      </script>
+      <!-- Script to Activate the Carousel -->
+      <script>
+        $('.carousel').carousel({
+          interval: 5000 //changes the speed
+        })
+      </script>
 
-                       
-        <div class="row"> <!--  11 -->
-            <div class="box"> <!--  12 -->
-                <div class="col-lg-12"> <!--  13 -->
-                    <hr>
-                    <h2 class="intro-text text-center"> About GramVaani Soochna Sanchar </h2>
-                    <hr>
-                    <!--img class="img-responsive img-border img-left" src="/assets/e-gov.gif" alt=""-->
-                    <!--hr class="visible-xs"-->
-                    <p>This web portal provides the Government/Non Government Organisation personnel to spread information through this central point.</p> 
-                    <p> The portal allows its NGO users to add the information of human access points who are the responsible people of the society on the portal which also gets stored in the GramVaani Database.  </p>
-                    <p>Gram Vaani provides the information of all the campaigns running in the  rural areas in different parts of the country which can be seen here <a href="http://www.gramvaani.org/" target="_blank">Gram Vaani official website </a> </p>
-                    <p>This portal allows the NGO users to launch surveys to be taken in tne rural areas.</p>
-                </div> <!--  13 -->
-            </div> <!--  12 -->
-        </div> <!--  11 -->
-    </div> <!--  5 -->
+      <!-- Javascript -->
+      <script src="/assets/jquery-1.11.1.min.js"></script>
+      <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/assets/jquery.backstretch.min.js"></script>
+      <script src="/assets/scripts.js"></script>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <p>Copyright &copy; GramVaani</p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/assets/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/assets/bootstrap.min.js"></script>
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
-
-<script>
-  $(document).ready(function () {
-    $('.dropdown-toggle').dropdown();
-  });
-</script>
-<!-- Script to Activate the Carousel -->
-<script>
-  $('.carousel').carousel({
-    interval: 5000 //changes the speed
-  })
-</script>
-
-<!-- Javascript -->
-<script src="/assets/jquery-1.11.1.min.js"></script>
-<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="/assets/jquery.backstretch.min.js"></script>
-<script src="/assets/scripts.js"></script>
-
-<!--[if lt IE 10]>
-<script src="/assets/placeholder.js"></script>
-<![endif]-->
-
-
-
-</body> <!-- 2  -->
-
+      <!--[if lt IE 10]>
+      <script src="/assets/placeholder.js"></script>
+      <![endif]-->
+    </body> <!-- 2  -->
 </html> <!-- 1.1 -->

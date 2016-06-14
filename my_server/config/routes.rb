@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   get '/createsurvey', to: 'survey#createsurvey'
   get '/getlocations', to: 'location#getlocation'
   get '/getquestions', to: 'survey#getsurveyquestion_app'
+  get '/getsurveyresponses', to: 'survey#getsurveyresponse_app'
   get '/getgrouplist', to: 'survey#group2con'
   get '/get_MVcallers', to: 'survey#MVcallers_1'
   post '/push_gcm', to: 'application#push_gcm_1'
@@ -53,15 +54,10 @@ Rails.application.routes.draw do
   get 'welcome/contact'
 
   #*************** SURVEY CONTROLLER ******************
-  get 'survey/create'
-  post 'survey/complete'
-  get 'survey/listsurvey'
-  post 'survey/survey_question'
-  post 'survey/survey_response'
+
+
   get 'survey/repo'
   post 'survey/questionattr'
-  post 'survey/create'     #create
-  post '/survey/SelectAdmintoLaunchSurvey'
 
   #*************** SESSIONS CONTROLLER ******************
 
@@ -89,9 +85,9 @@ Rails.application.routes.draw do
 
   post 'survey_portal/complete'
 
-  post 'survey_portal/survey_response'
+  get 'survey_portal/survey_response'
 
-  post 'survey_portal/survey_question'
+  get 'survey_portal/survey_question'
 
   get 'location/getlocation'
 
